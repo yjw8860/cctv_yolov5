@@ -1,0 +1,34 @@
+{"training_options":  {
+    "epochs": 10,
+    "batch_size": 1,
+    "gradient_accumulations": 2,
+    "pretrained_weights": "yolov5s.pt",
+    "img_size": [416, 416],
+    "checkpoint_interval": 1,
+    "evaluation_interval": 10,
+    "comput_map": false,
+    "multiscale_training": false,
+    "trained_weights_name": "train_results",
+    "train_ratio": 0.8
+  },
+  "DIR": {
+    "ROOT_DIR": "./cctv_test/",
+    "INPUT_IMG_FOLDER": "images",
+    "JSON_LABEL_FOLDER": "json_labels",
+    "TXT_LABEL_FOLDER": "txt_labels",
+    "CATEGORIES": ["가로현수막(낮)"],
+    "DETECTION_OUTPUT_FOLDER_NAME": "detection_results",
+    "DATASET_YALM": "data.yaml",
+    "PRETRAINED_MODEL_DIR": "./models/yolov5s.yaml",
+    "IMG_PATH_DICT_NAME" : "file_dict.json"
+  },
+  "test_options": {
+    "root_dir": "./cctv_test",
+    "dataset_name": "안전간판(낮)",
+    "data": "data.yaml",
+    "batch_size": 1,
+    "img_size": 416,
+    "conf_thres": 0.001,
+    "iou_thres": 0.6
+  }
+}
